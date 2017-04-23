@@ -1,0 +1,25 @@
+.@{prefix}app{
+    .windowed();
+
+    @half-bar : @app-bar-size/2;
+    @half-btn : @app-btn-size/2;
+    @btn-space: @app-btn-size * 3 + @half-bar * 4;
+
+    &::after {
+        @field-sizer : @btn-space + @half-bar;
+
+        display: block;
+        position: absolute;
+        content: ~"attr(data-@{prefix}app)";
+        top: -@half-bar - @app-field-size/2;
+        right: 0;
+        width: 100%;
+        height: @app-field-size;
+        font-size: @app-field-size * 0.75;
+        box-sizing: border-box;
+        line-height: @app-field-size;
+        padding-left: @app-field-size * 0.12;
+        color: @app-field-text;
+        text-align: center;
+    }
+}

@@ -1,0 +1,32 @@
+.@{prefix}browser{
+    .windowed();
+
+    @half-bar : @app-bar-size/2;
+    @half-btn : @app-btn-size/2;
+    @btn-space: @app-btn-size * 3 + @half-bar * 4;
+
+    &.@{prefix}url::after {
+        .line-text();
+        @field-sizer : @btn-space + @half-bar;
+
+        display: block;
+        position: absolute;
+        content: ~"attr(data-@{prefix}url)";
+        top: -@half-bar - @app-field-size/2;
+        left: @btn-space;
+        width: ~"calc(100% - @{field-sizer})";
+        height: @app-field-size;
+        background-color: @app-field-color;
+        font-size: @app-field-size * 0.75;
+        box-sizing: border-box;
+        line-height: @app-field-size;
+        padding-left: @app-field-size * 0.12;
+        color: @app-field-text;
+    }
+
+    &.@{prefix}alt.@{prefix}url::after{
+        @field-sizer : @app-btn-size + @half-bar * 3;
+        width: ~"calc(100% - @{field-sizer})";
+        left: @app-btn-size + @half-bar * 2;
+    }
+}

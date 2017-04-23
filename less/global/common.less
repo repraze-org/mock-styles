@@ -1,0 +1,52 @@
+.shadow(){
+    box-shadow: @shadow;
+}
+
+.base(){
+    background: lighten(@white, 10%);
+
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: @margin;
+
+    img{
+        display: block;
+    }
+}
+
+.line-text(){
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.windowed(){
+    .base();
+    .shadow();
+
+    border-top: @app-bar-size solid @app-bar-color;
+    border-radius: @app-bar-radius @app-bar-radius 0 0;
+
+    @half-bar : @app-bar-size/2;
+    @half-btn : @app-btn-size/2;
+    @btn-space: @app-btn-size * 3 + @half-bar * 4;
+
+    &::before{
+        display: block;
+        position: absolute;
+        content: '';
+        left: @app-bar-size/2;
+        top: -@half-bar - @half-btn;
+        width: @app-btn-size;
+        height: @app-btn-size;
+        border-radius: 50%;
+        background-color: @app-btn-close;
+        box-shadow: @app-btn-size+@half-bar 0 0 @app-btn-minim, @app-btn-size*2+@half-bar*2 0 0 @app-btn-maxim;
+    }
+
+    &.@{prefix}alt::before{
+        background-color: @app-btn-action;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,25 @@
+.@{prefix}stack{
+    .base();
+    .shadow();
+
+    @delta : @margin / 2;
+
+    box-shadow: @shadow,
+        0           (@delta)                0               (-@delta/2)                 @white,
+        @shadow-x   (@delta + @shadow-y)    @shadow-blur    (-@delta/2)+@shadow-spread  @shadow-color,
+        0           (@delta*2)              0               (-@delta)                   @white,
+        @shadow-x   (@delta*2 + @shadow-y)  @shadow-blur    (-@delta)+@shadow-spread    @shadow-color;
+}
+
+.@{prefix}stack.@{prefix}alt{
+    .base();
+    .shadow();
+
+    @delta : @margin / 2;
+
+    box-shadow: @shadow,
+        0           (-@delta + @shadow-y)    0               (-@delta/2)                 @white,
+        @shadow-x   (-@delta + @shadow-y)    @shadow-blur    (-@delta/2)+@shadow-spread  @shadow-color,
+        0           (-@delta*2 + @shadow-y)  0               (-@delta)                   @white,
+        @shadow-x   (-@delta*2 + @shadow-y)  @shadow-blur    (-@delta)+@shadow-spread    @shadow-color;
+}
