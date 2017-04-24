@@ -50,6 +50,7 @@
   line-height: 12.5px;
   padding-left: 1.5px;
   color: #8d8d98;
+  text-align: left;
 }
 .mkst-browser.mkst-alt.mkst-url::after {
   width: calc(100% - 47.5px);
