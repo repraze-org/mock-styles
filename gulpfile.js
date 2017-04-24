@@ -21,8 +21,10 @@ const options = {
     output  : './build/',
     suffix  : '.min',
     plumber : function(err){
-        console.log(err);
-        this.emit('end');
+        if(!process.env.CI){
+            console.log(err);
+            this.emit('end');
+        };
     },
     clean   : {
         format:{
@@ -39,6 +41,12 @@ const options = {
         ' */',
     '',''].join('\n'),
 };
+
+// Default, used by Travis CI
+
+gulp.task('default', function() {
+  runSequence('build-less', 'build-demo');
+});
 
 // Build tasks
 
