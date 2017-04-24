@@ -44,9 +44,7 @@ const options = {
 
 // Default, used by Travis CI
 
-gulp.task('default', function() {
-  runSequence('build-less', 'build-demo');
-});
+gulp.task('default', ['build-less', 'build-demo']);
 
 // Build tasks
 
