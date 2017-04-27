@@ -2,7 +2,8 @@
   "name": "mock-styles",
   "version": "1.0.0",
   "description": "A CSS library to help you highlight and beautify your content with simple classes",
-  "main": "",
+  "main": "mock-styles.css",
+  "style": "mock-styles.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

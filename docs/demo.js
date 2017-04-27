@@ -21,7 +21,6 @@
             {class: 'mkst-stack mkst-alt'},
 
             {class: 'mkst-shuffled'},
-            {class: 'mkst-shuffled mkst-alt'},
             {class: 'mkst-shuffled mkst-nice'},
             {class: 'mkst-shuffled mkst-nice mkst-alt'},
             {class: 'mkst-shuffled mkst-messy'},

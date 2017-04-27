@@ -18,7 +18,7 @@ const pkg = JSON.parse(fs.readFileSync('package.json'));
 
 const options = {
     input   : './less/*.less',
-    output  : './build/',
+    output  : './',
     suffix  : '.min',
     plumber : function(err){
         if(!process.env.CI){
@@ -44,7 +44,7 @@ const options = {
 
 // Default, used by Travis CI
 
-gulp.task('default', ['build-less', 'build-demo']);
+gulp.task('default', ['build-less', 'build-docs']);
 
 // Build tasks
 
@@ -71,18 +71,18 @@ gulp.task('build-less', function(){
 
 // Demo tasks
 
-gulp.task('build-demo', function(){
-    return gulp.src('./demo/*.less')
+gulp.task('build-docs', function(){
+    return gulp.src('./docs/*.less')
         .pipe(plumber(options.plumber))
         .pipe(less())
         .pipe(autoprefixer())
         .pipe(cleanCSS())
-        .pipe(gulp.dest('./demo/'));
+        .pipe(gulp.dest('./docs/'));
 });
 
 // Watcher
 
 gulp.task('watch', function () {
     gulp.watch('./less/**/*.less', ['build-less']);
-    gulp.watch('./demo/**/*.less', ['build-demo']);
+    gulp.watch('./docs/**/*.less', ['build-docs']);
 });
