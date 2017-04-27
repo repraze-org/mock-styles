@@ -44,7 +44,7 @@ const options = {
 
 // Default, used by Travis CI
 
-gulp.task('default', ['build-less', 'build-docs']);
+gulp.task('default', ['build-less', 'build-demo']);
 
 // Build tasks
 
@@ -71,18 +71,18 @@ gulp.task('build-less', function(){
 
 // Demo tasks
 
-gulp.task('build-docs', function(){
-    return gulp.src('./docs/*.less')
+gulp.task('build-demo', function(){
+    return gulp.src('./demo/*.less')
         .pipe(plumber(options.plumber))
         .pipe(less())
         .pipe(autoprefixer())
         .pipe(cleanCSS())
-        .pipe(gulp.dest('./docs/'));
+        .pipe(gulp.dest('./demo/'));
 });
 
 // Watcher
 
 gulp.task('watch', function () {
     gulp.watch('./less/**/*.less', ['build-less']);
-    gulp.watch('./docs/**/*.less', ['build-docs']);
+    gulp.watch('./demo/**/*.less', ['build-demo']);
 });
