@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <title>Mock Styles Test</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" />
+        <link rel="stylesheet" href="mock-styles.min.css">
+        <style>
+            .content{
+                margin: 0 auto;
+                width: 100%;
+                max-width: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <article id="browser">
+                <h2>Mocking Browsers</h2>
+                <h3>Simple Browser</h3>
+                <div class="mkst-browser">
+                    <img src="test.png">
+                </div>
+                <h3>Browser With URL Field</h3>
+                <div class="mkst-browser mkst-url">
+                    <img src="test.png">
+                </div>
+                <h3>Browser With URL Field Filled</h3>
+                <div class="mkst-browser mkst-url" data-mkst-url="http://repraze.com">
+                    <img src="test.png">
+                </div>
+                <h3>Alternative Browser</h3>
+                <div class="mkst-browser mkst-url mkst-alt" data-mkst-url="http://repraze.com">
+                    <img src="test.png">
+                </div>
+            </article>
+            <article id="app">
+                <h2>Mocking Apps</h2>
+                <h3>Simple App</h3>
+                <div class="mkst-app">
+                    <img src="test.png">
+                </div>
+                <h3>App With Name</h3>
+                <div class="mkst-app" data-mkst-app="Repraze App">
+                    <img src="test.png">
+                </div>
+                <h3>Alternative App</h3>
+                <div class="mkst-app mkst-alt" data-mkst-app="Repraze App">
+                    <img src="test.png">
+                </div>
+            </article>
+            <article id="app">
+                <h2>Mocking Stacked papers</h2>
+                <h3>Stack</h3>
+                <div class="mkst-stack">
+                    <img src="test.png">
+                </div>
+                <h3>Alternative Stack</h3>
+                <div class="mkst-stack mkst-alt">
+                    <img src="test.png">
+                </div>
+            </article>
+            <article id="app">
+                <h2>Mocking Shuffled papers</h2>
+                <h3>Simple Shuffle</h3>
+                <div class="mkst-shuffled">
+                    <img src="test.png">
+                </div>
+                <h3>Nice Shuffle</h3>
+                <div class="mkst-shuffled mkst-nice">
+                    <img src="test.png">
+                </div>
+                <h3>Alternative Nice Shuffle</h3>
+                <div class="mkst-shuffled mkst-nice mkst-alt">
+                    <img src="test.png">
+                </div>
+                <h3>Messy Shuffle</h3>
+                <div class="mkst-shuffled mkst-messy">
+                    <img src="test.png">
+                </div>
+                <h3>Alternative Messy Shuffle</h3>
+                <div class="mkst-shuffled mkst-messy mkst-alt">
+                    <img src="test.png">
+                </div>
+            </article>
+        </div>
+    </body>
+</html>
