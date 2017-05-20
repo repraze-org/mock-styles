@@ -1,8 +1,8 @@
 (function($){
     $.fn.demo = function(params){
         var settings = $.extend({
-            speed : 1000,
-            sleep : 2000,
+            speed : 500,
+            sleep : 500,
         }, params);
 
         var stages = [
@@ -25,6 +25,12 @@
             {class: 'mkst-shuffled mkst-nice mkst-alt'},
             {class: 'mkst-shuffled mkst-messy'},
             {class: 'mkst-shuffled mkst-messy mkst-alt'},
+
+            {class: 'mkst-frame'},
+            {class: 'mkst-frame mkst-alt'},
+
+            {class: 'mkst-instant'},
+            {class: 'mkst-instant', data: {'mkst-text' : "Repraze Styling"}},
         ];
 
         return this.each(function(){

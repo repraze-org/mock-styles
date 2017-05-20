@@ -49,7 +49,7 @@
   box-sizing: border-box;
   line-height: 12.5px;
   padding-left: 1.5px;
-  color: #8d8d98;
+  color: #9696a0;
   text-align: left;
   text-shadow: none;
 }
@@ -98,7 +98,7 @@
   box-sizing: border-box;
   line-height: 12.5px;
   padding-left: 1.5px;
-  color: #8d8d98;
+  color: #9696a0;
   text-align: center;
   text-shadow: none;
 }
@@ -189,4 +189,83 @@
 .mkst-shuffled.mkst-messy.mkst-alt::before {
   -webkit-transform: rotateZ(5deg);
           transform: rotateZ(5deg);
+}
+.mkst-frame {
+  background: #ffffff;
+  display: inline-block;
+  width: auto;
+  margin: 25px;
+  background-color: #f6f5f7;
+  border: solid 12.5px #f5f2fa;
+  border-bottom-color: #ffffff;
+  border-left-color: #f5f2fa;
+  border-right-color: #f5f2fa;
+  border-top-color: #e4ddf1;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2), inset 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  padding: 25px;
+  position: relative;
+}
+.mkst-frame img {
+  display: block;
+}
+.mkst-frame.mkst-alt {
+  background-color: #353535;
+  border: solid 12.5px #323238;
+  border-bottom-color: #3e3e4b;
+  border-left-color: #323238;
+  border-right-color: #323238;
+  border-top-color: #252526;
+}
+.mkst-frame::before {
+  content: "";
+  position: absolute;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  top: -5px;
+  right: -5px;
+  left: -5px;
+  bottom: -5px;
+}
+.mkst-frame::after {
+  content: "";
+  position: absolute;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  top: -6.25px;
+  right: -6.25px;
+  left: -6.25px;
+  bottom: -6.25px;
+}
+.mkst-instant {
+  background: #ffffff;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  margin: 25px;
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  padding: 12.5px 12.5px 50px 12.5px;
+}
+.mkst-instant img {
+  display: block;
+}
+.mkst-instant::after {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  position: absolute;
+  content: attr(data-mkst-text);
+  bottom: 12.5px;
+  left: 0;
+  width: 100%;
+  height: 25px;
+  background-color: #ffffff;
+  font-size: 18.75px;
+  box-sizing: border-box;
+  line-height: 25px;
+  color: #9696a0;
+  text-align: center;
+  text-shadow: none;
 }
