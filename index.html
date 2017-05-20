@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <title>Mock Styles</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+
+        <link rel="stylesheet" href="demo/demo.css">
+        <link rel="stylesheet" href="latest/mock-styles.min.css">
+
+        <link rel="stylesheet" href="demo/prism/prism.css">
+        <script src="demo/prism/prism.js" charset="utf-8"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+        <script src="demo/demo.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <nav class="menu">
+            <div class="wrap">
+                <span class="title">Mock Styles</span>
+                <ul>
+                    <li><a href="https://twitter.com/repraze" class="twitter-follow-button" data-show-count="false">@repraze</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+                    <li><a class="github-button" href="https://github.com/repraze-org/mock-styles" aria-label="Star repraze-org/mock-styles on GitHub">Repo</a></li>
+                    <li><a class="github-button" href="https://github.com/repraze-org/mock-styles/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork repraze-org/mock-styles on GitHub">Fork</a></li>
+                </ul>
+            </div>
+        </nav>
+        <header>
+            <h1>Mock Styles</h1>
+            <p>A CSS library to help you highlight and beautify your content with simple classes</p>
+            <div class="demo-resize" id="demo">
+                <div class="demo-container">
+                    <div class="demo-animate mkst-browser">
+                        <div class="demo-resize-handle"></div>
+                    </div>
+                </div>
+                <div class="demo-info">
+                    <div class="class"></div>
+                    <div class="data"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $('#demo').demo();
+            </script>
+        </header>
+        <div class="content">
+            <article id="browser">
+                <h2>Mocking Browsers</h2>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-browser">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Simple Browser</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-browser">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-browser mkst-url">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Browser With URL Field</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-browser mkst-url">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-browser mkst-url" data-mkst-url="http://repraze.com">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Browser With URL Field Filled</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-browser mkst-url"
+                                data-mkst-url="http://repraze.com">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-browser mkst-url mkst-alt" data-mkst-url="http://repraze.com">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Alternative Browser</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-browser mkst-url mkst-alt"
+                                data-mkst-url="http://repraze.com">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+            </article>
+            <article id="app">
+                <h2>Mocking Apps</h2>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-app">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Simple App</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-app">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-app" data-mkst-app="Repraze App">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>App With Name</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-app"
+                                data-mkst-app="Repraze App">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-app mkst-alt" data-mkst-app="Repraze App">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Alternative App</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-app mkst-alt"
+                                data-mkst-app="Repraze App">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+            </article>
+            <article id="app">
+                <h2>Mocking Stacked papers</h2>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-stack">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Stack</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-stack">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-stack mkst-alt">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Alternative Stack</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-stack mkst-alt">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+            </article>
+            <article id="app">
+                <h2>Mocking Shuffled papers</h2>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-shuffled">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Simple Shuffle</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-shuffled">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-shuffled mkst-nice">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Nice Shuffle</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-shuffled mkst-nice">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-shuffled mkst-nice mkst-alt">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Alternative Nice Shuffle</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-shuffled mkst-nice mkst-alt">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-shuffled mkst-messy">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Messy Shuffle</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-shuffled mkst-messy">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+                <div class="showcase">
+                    <div class="view">
+                        <div class="mkst-shuffled mkst-messy mkst-alt">
+                            <img src="demo/demo.png">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3>Alternative Messy Shuffle</h3>
+                        <pre><code class="language-markup"><!--
+                            <div class="mkst-shuffled mkst-messy mkst-alt">
+                                <img src="demo/demo.png">
+                            </div>
+                        --></code></pre>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <footer>
+            <div class="wrap">
+                <div class="left"><a href="https://travis-ci.org/repraze-org/mock-styles" title="Build Status"><img src="https://travis-ci.org/repraze-org/mock-styles.svg?branch=master"></a> - Give it a try!</div>
+                <div class="right">By <a href="http://repraze.com">repraze</a></div>
+            </div>
+        </footer>
+    </body>
+</html>
