@@ -6,21 +6,23 @@
 @green  : #23d059;
 @blue	: #2958d6;
 @white	: #f5f2fa;
-@black	: #121214;
+@black	: #1a1a1d;
 
 // Global settings
 
-@margin : 25px;
+@margin         : 25px;
 @shadow-color   : rgba(0, 0, 0, 0.2);
 @shadow-x       : 0;
 @shadow-y       : 1px;
 @shadow-blur    : 3px;
 @shadow-spread  : 1px;
-@shadow : @shadow-x @shadow-y @shadow-blur @shadow-spread @shadow-color;
+@shadow         : @shadow-x @shadow-y @shadow-blur @shadow-spread @shadow-color;
+@bg             : @white;
+@bg-alt         : lighten(@black, 10%);
 
 // App mocks settings
 
-@app-bar-size   : 25px;
+@app-bar-size   : @margin;
 @app-bar-color  : @white;
 @app-bar-radius : 3px;
 
@@ -33,4 +35,11 @@
 
 @app-field-size : @app-bar-size/2;
 @app-field-color: lighten(@white, 5%);
-@app-field-text: lighten(@black, 50%);
+@app-field-text : lighten(@black, 50%);
+
+// Frame mocks settings
+
+@frame-radius   : 2px;
+@frame-size     : @margin / 2;
+@frame-padding  : @margin;
+@frame-text-size: @margin;

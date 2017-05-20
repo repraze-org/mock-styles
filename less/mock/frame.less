@@ -1,0 +1,48 @@
+.@{prefix}frame{
+    .base();
+
+    .frame(@bc){
+        background-color: desaturate(@bc, 35%);
+        border:solid @frame-size @bc;
+        border-bottom-color: saturate(lighten(@bc, 6%), 4%);
+        border-left-color: @bc;
+        border-right-color: @bc;
+        border-top-color: desaturate(darken(@bc, 6%), 4%);
+    }
+
+    .frame(@bg);
+
+    border-radius: @frame-radius;
+    box-shadow: @shadow, inset @shadow;
+    box-sizing: border-box;
+    padding: @frame-padding;
+    position: relative;
+
+    &.@{prefix}alt{
+        .frame(@bg-alt);
+    }
+
+    &::before {
+        @delta : -@frame-size*2/5;
+        content: "";
+        position: absolute;
+        border-radius: @frame-radius;
+        box-shadow: inset @shadow;
+        top: @delta;
+        right: @delta;
+        left: @delta;
+        bottom: @delta;
+    }
+
+    &::after {
+        @delta : -@frame-size/2;
+        content: "";
+        position: absolute;
+        border-radius: @frame-radius;
+        box-shadow: @shadow;
+        top: @delta;
+        right: @delta;
+        left: @delta;
+        bottom: @delta;
+    }
+}

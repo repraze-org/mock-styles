@@ -1,0 +1,25 @@
+.@{prefix}instant{
+    .base();
+    .shadow();
+
+    padding: @frame-size @frame-size (@frame-size*2+@frame-text-size) @frame-size;
+
+    &::after{
+        .line-text();
+
+        display: block;
+        position: absolute;
+        content: ~"attr(data-@{prefix}text)";
+        bottom: @frame-size;
+        left: 0;
+        width: 100%;
+        height: @frame-text-size;
+        background-color: @app-field-color;
+        font-size: @frame-text-size * 0.75;
+        box-sizing: border-box;
+        line-height: @frame-text-size;
+        color: @app-field-text;
+        text-align: center;
+        text-shadow: none;
+    }
+}
