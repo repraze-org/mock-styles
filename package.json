@@ -1,6 +1,6 @@
 {
   "name": "mock-styles",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CSS library to help you highlight and beautify your content with simple classes",
   "main": "mock-styles.css",
   "style": "mock-styles.css",
