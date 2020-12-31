@@ -1,6 +1,6 @@
 # mock-styles
 
-> :warning: This package is deprecated
+> :warning: DEPRECATED - Package no longuer supported. You can use the source code.
 
 A CSS library to help you highlight and beautify your content with simple classes
 
